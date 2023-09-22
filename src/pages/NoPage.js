@@ -1,7 +1,9 @@
 function NoPage() {
     return (
         <>
-            <div>Page Not Found</div>
+            <div className="d-flex justify-content-center align-items-center" style={{height: "100vh"}}>
+                <h1>Page Not Found</h1>
+            </div>
         </>
     );
 }

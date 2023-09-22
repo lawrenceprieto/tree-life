@@ -1,23 +1,16 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import NoPage from './pages/NoPage';
-import PageLayout from './pages/PageLayout';
-import SigninPage from './pages/SigninPage';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <NavBar />
         <Routes>
-          <Route path="/" element={<PageLayout />}>
-            <Route index element={<HomePage />} />
-            <Route path="signin" element={<SigninPage />} />
-            <Route path="*" element={<NoPage />} />
-          </Route>
+          <Route path="/" element={<HomePage />} />
+          <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
     </>
