@@ -7,10 +7,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="*" element={<NoPage />} />
+          <Route path="/tree-life" element={<NavBar />}>
+            <Route index element={<HomePage />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
